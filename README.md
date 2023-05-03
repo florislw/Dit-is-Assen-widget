@@ -16,20 +16,9 @@ Assen (www.vaartinassen.nl).
 Voeg de volgende code toe aan de `<head>` sectie van uw website:
 
 ```html
-
 <script>
-    (function ( w, d, s, o, f, js, fjs ) {
-        w['JS-Widget'] = o;
-        w[o] = w[o] || function () {
-            (w[o].q = w[o].q || []).push( arguments )
-        };
-        js = d.createElement( s ), fjs = d.getElementsByTagName( s )[0];
-        js.id = o;
-        js.src = f;
-        js.async = 1;
-        fjs.parentNode.insertBefore( js, fjs );
-    }( window, document, 'script', 'vasWidget', './widget.js' ));
-    vasWidget( 'renderWidget', {type: 'small', positionX: 'right', positionY: 'top', zIndex: 100} );
+(function (w,d,s,o,f,js,fjs) {w['JS-Widget']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);}(window, document, 'script', 'vasWidget', './widget.js'));
+vasWidget('renderWidget', { type: 'small', positionX: 'right', positionY: 'top'});
 </script>
 ```
 
@@ -39,4 +28,4 @@ andere elementen op uw pagina wilt wijzigen (standaardwaarde is 100).
 
 ## DEMO
 
-Er is een demo beschikbaar op de volgende pagina: https://vaartinassen.nl/widget/demo.html
+Er is een demo beschikbaar op de volgende pagina: https://florislw.github.io/Vaart-in-Assen-widget/demo/index.html

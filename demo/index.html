@@ -38,7 +38,7 @@ Variaties
 
 <template>
 <h3><span class="title"></span><span class="preview">Voorbeeld</span></h3>
-<textarea disabled rows="6">
+<textarea disabled rows="7">
 (function (w,d,s,o,f,js,fjs) {w['JS-Widget']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);}(window, document, 'script', 'vasWidget', './widget.js'));
 </textarea>
 </template>
@@ -78,7 +78,7 @@ for (const type of ['small', 'large']) {
 
             // Get the textarea template and add it to the dom with the config
             const textarea = template.content.querySelector('textarea').cloneNode(true);
-            textarea.value += config;
+            textarea.value = '<script' + '>' + textarea.value + config + '</' + 'script>';
 
             document.body.appendChild(heading);
             document.body.appendChild(textarea);
