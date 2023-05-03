@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>Demo page of the widget</title>
+<style>
+body {
+    font-family: sans-serif;
+    max-width: 40rem;
+    margin: 1rem auto;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+h3 {
+    text-transform: capitalize;
+    margin-top: 1em;
+}
+
+.preview {
+    font-size: 1rem;
+    font-weight: normal;
+    color: darkblue;
+    text-transform: italic;
+    display: inline-block;
+    float: right;
+}
+</style>
+</head>
+<body>
+<h1>Vaart in Assen widget</h1>
+<h2>Instructies</h2>
+<p>Plaats de code op de pagina waar de widget moet komen te staan.</p>
+<h2>
+Variaties
+</h2>
+
+<template>
+<h3><span class="title"></span><span class="preview">Voorbeeld</span></h3>
+<textarea disabled rows="6">
+(function (w,d,s,o,f,js,fjs) {w['JS-Widget']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);}(window, document, 'script', 'vasWidget', './widget.js'));
+</textarea>
+</template>
+<script>
+   (function (w,d,s,o,f,js,fjs) {
+       w['VAS-widget']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+       js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+       js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+   }(window, document, 'script', 'vasWidget', './widget.js'));
+   vasWidget('renderWidget', { type: 'small', positionX: 'right', positionY: 'top'});
+</script>
+<script>
+const widgetScript = (type, positionX, positionY) => `vasWidget('renderWidget', { type: '${type}', positionX: '${positionX}', positionY: '${positionY}'});`;
+
+const reRenderWidget = (type, positionX, positionY) => {
+console.log(type, positionX, positionY)
+    const config = `window[window['VAS-widget']]('renderWidget', { type: '${type}', positionX: '${positionX}', positionY: '${positionY}'});`;
+
+    // remove old widget
+    const oldWidget = document.querySelector('.vaart-in-assen-widget');
+    if (oldWidget) {
+        oldWidget.remove();
+    }
+
+    eval(config);
+}
+
+for (const type of ['small', 'large']) {
+    for (const positionX of ['left', 'right']) {
+        for (const positionY of ['bottom', 'top']) {
+            const config = widgetScript(type, positionX, positionY);
+            const template = document.querySelector('template');
+
+            // Get the heading from the template and add it to the dom
+            const heading = template.content.querySelector('h3').cloneNode(true);
+            heading.querySelector('.title').innerText = `${type} - ${positionX} - ${positionY}`;
+
+            // Get the textarea template and add it to the dom with the config
+            const textarea = template.content.querySelector('textarea').cloneNode(true);
+            textarea.value += config;
+
+            document.body.appendChild(heading);
+            document.body.appendChild(textarea);
+
+            // preview the widget on heading click
+            heading.addEventListener('click', function() {
+                reRenderWidget(type, positionX, positionY);
+            });
+        }
+    }
+}
+</script>
+</body>
+</html>
