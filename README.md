@@ -27,4 +27,4 @@ andere elementen op uw pagina wilt wijzigen (standaardwaarde is 100).
 
 ## DEMO
 
-Er is een demo beschikbaar op de volgende pagina: https://florislw.github.io/Vaart-in-Assen-widget/demo/index.html
+Er is een demo beschikbaar op de volgende pagina: https://florislw.github.io/Dit-is-Assen-widget/demo/index.html
