@@ -16,7 +16,7 @@ let configurations = {
 function app( window ) {
     // all methods that were called till now and stored in queue
     // needs to be called now
-    let globalObject = window[window['VAS-widget']];
+    let globalObject = window[window['DIA-widget']];
     let queue = globalObject.q;
     if ( queue ) {
         for ( var i = 0; i < queue.length; i ++ ) {
@@ -27,7 +27,7 @@ function app( window ) {
     // override temporary (until the app loaded) handler
     // for widget's API calls
     globalObject = apiHandler;
-    window[window['VAS-widget']] = globalObject;
+    window[window['DIA-widget']] = globalObject;
     globalObject.configurations = configurations;
 }
 

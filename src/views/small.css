@@ -1,38 +1,38 @@
-.vaart-in-assen-small {
+.dit-is-assen-small {
     height: 80px;
     width: 80px;
     padding: 0 10px 10px 10px;
 
-    &.vaart-in-assen-right {
+    &.dit-is-assen-right {
         right: 0;
 
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
     }
 
-    &.vaart-in-assen-bottom {
+    &.dit-is-assen-bottom {
         bottom: 20px;
     }
 
-    &.vaart-in-assen-left {
+    &.dit-is-assen-left {
         left: 0;
 
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
 
-    &.vaart-in-assen-top {
+    &.dit-is-assen-top {
         top: 0;
         background-color: transparent;
         padding: 0;
         border-radius: 0;
         box-shadow: none;
 
-        &.vaart-in-assen-left {
+        &.dit-is-assen-left {
             left: 20px;
         }
 
-        &.vaart-in-assen-right {
+        &.dit-is-assen-right {
             right: 20px;
         }
     }

@@ -1,8 +1,8 @@
-# Vaart in Assen Widget
+# Dit is Assen Widget
 
-De Vaart in Assen widget is een eenvoudige en aanpasbare tool die een logo (groot of klein) van Vaart in Assen op uw
+De Dit is Assen widget is een eenvoudige en aanpasbare tool die een logo (groot of klein) van Dit is Assen op uw
 website weergeeft. Wanneer bezoekers op het logo klikken, worden ze doorgestuurd naar de officiële website van Vaart in
-Assen (www.vaartinassen.nl).
+Assen (www.ditisassen.nl).
 
 ## Kenmerken
 

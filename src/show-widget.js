@@ -17,9 +17,9 @@ export function show( {
     const temporary = document.createElement( 'div' );
     temporary.innerHTML = type === 'large' ? large : small;
 
-    const widget = temporary.querySelector( '.vaart-in-assen-widget' );
-    widget.classList.add( `vaart-in-assen-${ positionX }` );
-    widget.classList.add( `vaart-in-assen-${ positionY }` );
+    const widget = temporary.querySelector( '.dit-is-assen-widget' );
+    widget.classList.add( `dit-is-assen-${ positionX }` );
+    widget.classList.add( `dit-is-assen-${ positionY }` );
     widget.style.zIndex = zIndex;
 
     // append elements to body

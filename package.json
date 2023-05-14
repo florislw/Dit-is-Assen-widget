@@ -1,6 +1,6 @@
 {
-  "name": "vas-widget",
-  "description": "Widget with Vaart in Assen logo to embed onto websites",
+  "name": "dia-widget",
+  "description": "Widget with Dit is Assen logo to embed onto websites",
   "version": "0.1.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
