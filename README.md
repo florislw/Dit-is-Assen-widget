@@ -7,8 +7,9 @@ website weergeeft. Wanneer bezoekers op het logo klikken, worden ze doorgestuurd
 
 - Keuze uit een groot of klein logo
 - Widget blijft bovenaan de pagina zweven, zodat het altijd zichtbaar is
-- Mogelijkheid om de positie aan te passen (boven/onder, links/rechts)
-- Optionele z-index instelling (zIndex, standaardwaarde: 100)
+- Mogelijkheid om de positie aan te passen (boven/onder, links/rechts). Let op: voor het kleine logo is boven niet
+  beschikbaar.
+- Optionele stapelvolgorde (z-index) instelling (zIndex, standaardwaarde: 100)
 
 ## Installatie
 
@@ -23,7 +24,8 @@ vasWidget('renderWidget', { type: 'small', positionX: 'right', positionY: 'top'}
 
 Vervang type: 'small' door type: 'large' voor een groter logo en pas positionX en positionY aan om de gewenste positie
 van de widget te bepalen. U kunt ook de zIndex waarde aanpassen als u de stapelvolgorde van de widget ten opzichte van
-andere elementen op uw pagina wilt wijzigen (standaardwaarde is 100).
+andere elementen op uw pagina wilt wijzigen (standaardwaarde is 100). Verhoog deze waarde als de widget achter andere
+elementen op de pagina verdwijnt.
 
 ## DEMO
 

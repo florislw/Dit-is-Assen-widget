@@ -31,7 +31,15 @@ h3 {
 <body>
 <h1>Dit is Assen widget</h1>
 <h2>Instructies</h2>
-<p>Plaats de code op de pagina waar de widget moet komen te staan.</p>
+<p>
+Plaats onderstaande code op uw website tussen de &lt;head&gt; ... &lt;/head&gt; tags.
+U kunt hiervoor eventueel de volgende instructies raadplegen:
+</p>
+<ul>
+<li><a href="https://kinsta.com/nl/kennisbank/code-toevoegen-aan-de-wordpress-header-en-footer/">Wordpress</a></li>
+<li><a href="https://support.wix.com/nl/article/aangepaste-code-toevoegen-aan-je-website">Wix</a></li>
+<li><a href="https://support.squarespace.com/hc/en-us/articles/205815928-Adding-custom-code-to-your-site">Squarespace</a></li>
+</ul>
 <h2>
 Variaties
 </h2>
@@ -68,6 +76,11 @@ const reRenderWidget = (type, positionX, positionY) => {
 for (const type of ['small', 'large']) {
     for (const positionX of ['left', 'right']) {
         for (const positionY of ['bottom', 'top']) {
+            // disable small top
+            if (type === 'small' && positionY === 'top') {
+                continue;
+            }
+
             const config = widgetScript(type, positionX, positionY);
             const template = document.querySelector('template');
 
