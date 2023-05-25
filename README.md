@@ -33,4 +33,4 @@ elementen op de pagina verdwijnt.
 
 ## DEMO
 
-Er is een demo beschikbaar op de volgende pagina: [https://florislw.github.io/Dit-is-Assen-widget/demo/index.html](https://florislw.github.io/Dit-is-Assen-widget/demo/index.html)
+Er is een demo beschikbaar op de volgende pagina: [https://florislw.github.io/Dit-is-Assen-widget/demo/](https://florislw.github.io/Dit-is-Assen-widget/demo/)
