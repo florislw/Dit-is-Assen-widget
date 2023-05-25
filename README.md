@@ -17,8 +17,12 @@ Voeg de volgende code toe aan de `<head>` sectie van uw website:
 
 ```html
 <script>
-(function (w,d,s,o,f,js,fjs) {w['JS-Widget']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);}(window, document, 'script', 'vasWidget', './widget.js'));
-vasWidget('renderWidget', { type: 'small', positionX: 'right', positionY: 'top'});
+  (function (w,d,s,o,f,js,fjs) {
+    w['DIA-widget']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+    js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+    js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+  }(window, document, 'script', 'diaWidget', 'https://www.vaartinassen.nl/templates/gridbox/js/widget.js'));
+  diaWidget('renderWidget', { type: 'small', positionX: 'left', positionY: 'bottom'});
 </script>
 ```
 

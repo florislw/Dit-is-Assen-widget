@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Demo page of the widget</title>
+<title>Dit is Assen Widget Demo</title>
 <style>
 body {
     font-family: sans-serif;
@@ -36,9 +36,9 @@ Plaats onderstaande code op uw website tussen de &lt;head&gt; ... &lt;/head&gt; 
 U kunt hiervoor eventueel de volgende instructies raadplegen:
 </p>
 <ul>
-<li><a href="https://kinsta.com/nl/kennisbank/code-toevoegen-aan-de-wordpress-header-en-footer/">Wordpress</a></li>
-<li><a href="https://support.wix.com/nl/article/aangepaste-code-toevoegen-aan-je-website">Wix</a></li>
-<li><a href="https://support.squarespace.com/hc/en-us/articles/205815928-Adding-custom-code-to-your-site">Squarespace</a></li>
+<li><a target="_blank" href="https://kinsta.com/nl/kennisbank/code-toevoegen-aan-de-wordpress-header-en-footer/">Wordpress</a></li>
+<li><a target="_blank" href="https://support.wix.com/nl/article/aangepaste-code-toevoegen-aan-je-website">Wix</a></li>
+<li><a target="_blank" href="https://support.squarespace.com/hc/en-us/articles/205815928-Adding-custom-code-to-your-site">Squarespace</a></li>
 </ul>
 <h2>
 Variaties
@@ -46,8 +46,12 @@ Variaties
 
 <template>
 <h3><span class="title"></span><span class="preview">Voorbeeld</span></h3>
-<textarea disabled rows="7">
-(function (w,d,s,o,f,js,fjs) {w['JS-Widget']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);}(window, document, 'script', 'diaWidget', './widget.js'));
+<textarea readonly rows="9">
+(function (w,d,s,o,f,js,fjs) {
+   w['DIA-widget']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+   js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+   js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+}(window, document, 'script', 'diaWidget', 'https://www.vaartinassen.nl/templates/gridbox/js/widget.js'));
 </textarea>
 </template>
 <script>
@@ -55,7 +59,7 @@ Variaties
        w['DIA-widget']=o;w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
        js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
        js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
-   }(window, document, 'script', 'diaWidget', './../dist/widget.js'));
+   }(window, document, 'script', 'diaWidget', 'https://www.vaartinassen.nl/templates/gridbox/js/widget.js'));
    diaWidget('renderWidget', { type: 'small', positionX: 'left', positionY: 'bottom'});
 </script>
 <script>
